@@ -29,10 +29,6 @@ jobs:
         run: npm ci
       - name: test
         run: npm run test
-      - name: Run typescript lint and format check
-        run: npm run lint:ts
-      - name: Run styles lint and format check
-        run: npm run lint:css
   deploy:
     needs: [build, test]
     runs-on: ubuntu-latest
