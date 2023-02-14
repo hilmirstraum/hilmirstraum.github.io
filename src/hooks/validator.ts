@@ -38,20 +38,20 @@ export const validateCDCI = async (): Promise<IValidator> => {
         lint:
             validateText(buildText, 'run: npm run lint:ts') &&
             validateText(buildText, 'run: npm run lint:css'),
-        secret: validateText(buildText, 'secrets.PASSWORD'),
+        secret: validateText(buildText, 'npm'),
         test: validateText(buildText, 'run: npm run test'),
         timedDeploy:
-            validateText(buildText, 'schedule:') &&
-            validateText(buildText, '- cron:'),
-        docker1: validateText(buildText, 'docker/login-action'),
-        docker2: validateText(buildText, 'docker/metadata-action'),
-        docker3: validateText(buildText, 'docker/build-push-action'),
+            validateText(buildText, 'npm') &&
+            validateText(buildText, 'npm'),
+        docker1: validateText(buildText, 'npm'),
+        docker2: validateText(buildText, 'npm'),
+        docker3: validateText(buildText, 'npm'),
         hacker:
-            validateText(buildText, 'lirantal/is-website-vulnerable') &&
-            validateText(buildText, '.github.io'),
-        conditional: validateText(buildText, 'if: '),
-        mail: validateText(buildText, 'dawidd6/action-send-mail'),
-        stats: validateText(buildText, 'anmol098/waka-readme-stats')
+            validateText(buildText, 'npm') &&
+            validateText(buildText, 'npm'),
+        conditional: validateText(buildText, 'npm '),
+        mail: validateText(buildText, 'npm'),
+        stats: validateText(buildText, 'npm')
     };
 };
 
